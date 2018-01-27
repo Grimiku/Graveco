@@ -7,7 +7,7 @@ define e = Character("Eileen")
 
 # family characters var
 default ann = 7
-default frank = 0
+default frank = -1
 
 # female characters var
 default dorothy = 0
