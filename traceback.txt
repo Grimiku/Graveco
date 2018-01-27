@@ -1,0 +1,23 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 42, in script
+    if frank = 2:
+SyntaxError: invalid syntax (game/script.rpy, line 42)
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 42, in script
+    if frank = 2:
+  File "C:\Users\Mikolaj\Desktop\renpy-6.99.12.4-sdk\renpy\ast.py", line 1702, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\Mikolaj\Desktop\renpy-6.99.12.4-sdk\renpy\python.py", line 1833, in py_eval
+    code = py_compile(code, 'eval')
+  File "C:\Users\Mikolaj\Desktop\renpy-6.99.12.4-sdk\renpy\python.py", line 630, in py_compile
+    raise e
+SyntaxError: invalid syntax (game/script.rpy, line 42)
+
+Windows-8-6.2.9200
+Ren'Py 6.99.14.3135
+Graveco 1.0
