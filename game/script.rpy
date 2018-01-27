@@ -7,7 +7,7 @@ define e = Character("Eileen")
 
 # family characters var
 default ann = 7
-default frank = -1
+default persistent.frank = 0
 
 # female characters var
 default dorothy = 0
@@ -39,19 +39,21 @@ label start:
     
     # These display lines of dialogue.
     
-if frank == 1:
+    if persistent.frank == 1:
         
-    jump again
+        jump again
 
     e "You've created a new Ren'Py game."
 
     e "Once you add a story, pictures, and music, you can release it to 
     the world!"
     
-    $ frank = frank +1
+    $ persistent.frank += 1
+
+    e "This is a test!"
 
     # This ends the game.
-
+    
     return
     
 label again:
@@ -62,6 +64,6 @@ label again:
     
     e "Oh, so you have been here before."
     
-    # $ frank = 0
+    $ persistent.frank = 0
         
     return
