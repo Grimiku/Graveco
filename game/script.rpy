@@ -3,7 +3,8 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define f = Character("Frank", kind=nvl)
+define narrator = nvl_narrator
 
 # family characters var
 default ann = 7
@@ -24,37 +25,30 @@ default wan = 0
 # The game starts here.
 
 label start:
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show eileen happy
     
-    # These display lines of dialogue.
-    
-    if persistent.frank == 1:
+    # if persistent.frank == 1:
         
-        jump again
+    #    jump again
 
-    e "You've created a new Ren'Py game."
+    # $ persistent.frank += 1
 
-    e "Once you add a story, pictures, and music, you can release it to 
-    the world!"
+    nvl clear
     
-    $ persistent.frank += 1
+    f "This is a test!"
+    
+    "And this is some narration shit."
+    "More of it coming."
+    "In fact, all of this is still shitty."
 
-    e "This is a test!"
+    f "I wouldn't say so."
 
     # This ends the game.
     
     return
+    
+    
+    
+    
     
 label again:
     
@@ -62,7 +56,7 @@ label again:
     
     show eileen happy
     
-    e "Oh, so you have been here before."
+    f "Oh, so you have been here before."
     
     $ persistent.frank = 0
         
