@@ -8,6 +8,7 @@ define narrator = nvl_narrator
 
 # family characters var
 default ann = 7
+default persistent.ann = 0
 default persistent.frank = 0
 
 # female characters var
@@ -26,16 +27,14 @@ default wan = 0
 
 label start:
     
-    # if persistent.frank == 1:
-        
-    #    jump again
-
-    # $ persistent.frank += 1
-
+    # other lives go here
+    
+    jump prologo
+    
     nvl clear
     
     f "This is a test!"
-    
+
     "And this is some narration shit."
     "More of it coming."
     "In fact, all of this is still shitty."
@@ -48,7 +47,19 @@ label start:
     
     
     
+label prologo:
     
+    nvl clear
+    
+    #transition shit
+    
+    "Winter has come."
+    "Snowflakes begun to fall down to the ground, dancing their way through air."
+    "Each of them melted as it landed on a warm surface."
+    "Yet they kept falling, burying the ground under a deadly, {w=1.0}soft carpet."    
+    
+    
+    return
     
 label again:
     
