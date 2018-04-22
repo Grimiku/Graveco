@@ -5,6 +5,8 @@
 
 define f = Character("Frank", kind=nvl)
 define narrator = nvl_narrator
+image bg winterroad = "winterroad.jpg"
+
 
 # family characters var
 default ann = 7
@@ -24,6 +26,11 @@ default christoph = 0
 default wan = 0
 
 # The game starts here.
+
+# label splashscreen:
+    
+#    f "A splashscreen, huh?"
+
 
 label start:
     
@@ -49,7 +56,9 @@ label start:
     
 label prologo:
     
+    
     nvl clear
+    scene bg winterroad
     
     #transition shit
     
